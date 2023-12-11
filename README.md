@@ -1,1 +1,4 @@
-# Jatekok
+# jatek
+serializable
+
+design pattern
