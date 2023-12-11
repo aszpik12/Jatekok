@@ -4,6 +4,9 @@
  */
 package jatekok;
     
+import java.util.ArrayList;
+
 public class Karakter {
-    int eletero, ugyesseg, szerencse;
+   private int eletero, ugyesseg, szerencse;
+   private ArrayList<String> felszereles;
 }
