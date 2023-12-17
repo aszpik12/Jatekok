@@ -23,5 +23,11 @@ public class Felszereles {
     public UUID getId() {
         return id;
     }
+
+    @Override
+    public String toString() {
+        return "Felszereles{" + "nev=" + nev + ", leiras=" + leiras + ", id=" + id + '}';
+    }
    
+    
 }
