@@ -1,30 +1,32 @@
 package jatekok;
 
-public class Balra extends Helyszin implements MasikIrany {
+public class Jobbra extends Helyszin implements MasikIrany{
 
     @Override
     public String leiras() {
-        return "Üdv a bal oldalon";
+
+        return "ez a jobboldal";
     }
 
     @Override
     public String egyikBtnFelirata() {
-        return "Észak";
+        return "Kelet";
     }
 
     @Override
     public Helyszin egyikIrany() {
+
         return null;
     }
 
     @Override
     public String masikBtnFelirata() {
-        return "Dél";
+       return "Nugyat"; 
     }
 
     @Override
     public Helyszin masikIrany() {
-        return null;
+    return null;
     }
 
 }
