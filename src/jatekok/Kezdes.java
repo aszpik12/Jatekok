@@ -4,18 +4,18 @@ public class Kezdes extends Helyszin {
 
     @Override
     public String leiras() {
-        return "Ez a Kezdes!";
+        return "Ez a Kezdes! Jobbra vagy balra?";
     }
 
     @Override
     public Helyszin egyikIrany() {
 
-        return null;
+        return new Balra();
     }
 
     @Override
     public String egyikBtnFelirata() {
-        return "még tovább";
+        return "Balra";
     }
 
 }
