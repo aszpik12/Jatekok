@@ -12,4 +12,9 @@ public class Start extends Helyszin {
         return new Kezdes();
     }
 
+    @Override
+    public String egyikBtnFelirata() {
+    return "tovább!";
+    }
+
 }

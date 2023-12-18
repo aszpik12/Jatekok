@@ -10,7 +10,7 @@ package jatekok;
  */
 public class MainForm extends javax.swing.JFrame {
 
-    private Helyszin helyszin = new Start();
+    private Helyszin helyszin;
     
     /**
      * Creates new form MainForm
@@ -19,11 +19,11 @@ public class MainForm extends javax.swing.JFrame {
         initComponents();
         
         
-        
-        jTextArea1.setText(helyszin.leiras());
+        helyszin = new Start();
+        jTextArea1.insert(helyszin.leiras() + "\n", 0);
         
         jButton1.setVisible(false);
-        jButton2.setText("tovább");
+        jButton2.setText(helyszin.egyikBtnFelirata());
         
     }
 
@@ -45,12 +45,22 @@ public class MainForm extends javax.swing.JFrame {
         setTitle("Játék");
         setMinimumSize(new java.awt.Dimension(350, 200));
 
+        jScrollPane1.setToolTipText("");
+        jScrollPane1.setColumnHeader(null);
+        jScrollPane1.setColumnHeaderView(null);
+        jScrollPane1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+
         jTextArea1.setEditable(false);
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
         jScrollPane1.setViewportView(jTextArea1);
 
         jButton1.setText("Másik irány");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setText("Egyik irány");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -92,9 +102,17 @@ public class MainForm extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
 
         helyszin = helyszin.egyikIrany();
-        jTextArea1.setText(helyszin.leiras());
+        jTextArea1.insert(helyszin.leiras() + "\n", 0);
+        
+        jTextArea1.setCaretPosition(0);
+        
+        jButton2.setText(helyszin.egyikBtnFelirata());
 
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments

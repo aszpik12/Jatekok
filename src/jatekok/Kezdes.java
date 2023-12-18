@@ -13,4 +13,9 @@ public class Kezdes extends Helyszin {
         return null;
     }
 
+    @Override
+    public String egyikBtnFelirata() {
+        return "még tovább";
+    }
+
 }
